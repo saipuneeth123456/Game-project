@@ -1,0 +1,113 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 3rem;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .container {
+            background-color: goldenrod;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .rules {
+            color: white;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+
+        .btn {
+            background-color: burlywood;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto 0;
+            padding: 18px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+        }
+
+       
+        @media screen and (max-width: 768px) {
+            .heading {
+                font-size: 2rem;
+                margin-top: 10px;
+            }
+
+            .container {
+                width: 90%;
+                margin: 20px;
+                padding: 10px;
+            }
+
+            .rules {
+                font-size: 1rem;
+            }
+
+            .btn {
+                width: 80%;
+                font-size: 1rem;
+                padding: 15px;
+            }
+        }
+
+ 
+
+       
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">Welcome To Rock Paper Scissors Game</h1>
+    <div class="container">
+        <div class="rules">
+            <h3>Rules</h3>
+            <h3>Rock wins against scissors; <br>
+                paper wins against rock; <br>
+                scissors wins against paper. <br>
+                If both players throw the same hand signal, <br>
+                it is considered a tie, and play resumes until there is a clear winner.</h3>
+        </div>
+    </div>
+    <button class="btn" onclick="startGame()">Start</button>
+
+    <script>
+        function startGame() {
+            window.location.href="./index1.html";
+        }
+    </script>
+</body>
+</html>
+
+

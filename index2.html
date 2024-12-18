@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 3rem;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .container {
+            background-color: goldenrod;
+            width: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .rules {
+            color: white;
+            font-size: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            background-color: burlywood;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            padding: 18px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+       
+        @media screen and (max-width: 768px) {
+            .heading {
+                font-size: 2rem;
+                margin-top: 10px;
+            }
+
+            .container {
+                width: 90%;
+                margin: 20px;
+                padding: 15px;
+            }
+
+            .rules {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+
+            .btn {
+                width: 80%;
+                font-size: 1rem;
+                padding: 15px;
+            }
+
+            #resultDisplay {
+                font-size: 2.5rem;
+            }
+        }
+
+       
+      
+
+        
+    </style>
+</head>
+<body>
+    <h1 class="heading">Game Summary</h1>
+    <div class="container">
+        <div class="rules">
+            <h3>Thanks for playing<br>Click Home to play again</h3>
+        </div>
+    </div>
+
+    <div id="resultDisplay"></div>
+    <button class="btn" onclick="startGame()">Home</button>
+
+    <script>
+        // Function to start the game and go to the home page
+        function startGame() {
+            window.location.href = "index.html";
+            // Optionally, clear localStorage to reset game state
+            localStorage.clear();
+        }
+
+        // Get the game result stored in localStorage
+        const result = localStorage.getItem("result");
+
+        // Display the game result on the summary page
+        const resultDisplay = document.getElementById("resultDisplay");
+        resultDisplay.innerHTML = `<p>Result: You ${result}!</p>`;
+    </script>
+</body>
+</html>
